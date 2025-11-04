@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=10">
+  <title>Home</title>
+  <link rel="stylesheet" href="/Home_files/stylecss">
+
+  <script src="/Home_files/jqueryminjsdownload"></script>
+  <script>
+    $(document)ready(function () {
+      $("#imageModal")css("display", "none");
+
+      $("scroll-button")on("click", function (event) {
+        if (thishash !== "") {
+          eventpreventDefault();
+
+          var hash = thishash;
+
+          $("html, body")animate(
+            {
+              scrollTop: $(hash)offset()top,
+            },
+            1000,
+            function () {
+              windowlocationhash = hash;
+            }
+          );
+        }
+      });
+
+      $("portfolio img")on("click", function () {
+        $("#fullImage")attr("src", thissrc);
+        $("#imageModal")css("display", "flex");
+      });
+
+      $("close")on("click", function () {
+        $("#imageModal")css("display", "none");
+      });
+
+      $(window)on("beforeunload", function () {
+        $("#imageModal")css("display", "none");
+      });
+    });
+  </script>
+<style>undefined</style></head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">loret010</a>
+
+    <nav class="navbar">
+      <a href="indexhtml" class="active">Home</a>
+      <a href="abouthtml">About</a>
+    </nav>
+  </header>
+  <section class="home">
+    <div class="home-content">
+      <h1>Hi, I'm Lorenzo </h1>
+      <h3>He/Him, Web/Discord Bot Developer</h3>
+    </div>
+    <img id="ava-img" src="/Home_files/profile pic.png" alt="profile">
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+    <img src="/Home_files/x" alt="N/A">
+</section>
+
+<div id="imageModal" class="modal" style="display: none;">
+  <span class="close">×</span>
+  <img class="modal-content" id="fullImage">
+</div>
+
+
+</body></html>
