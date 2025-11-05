@@ -215,10 +215,11 @@ body {
 
 .portfolio {
   padding: 2rem;
-  margin: 20px;
+  margin: 20px auto;
+  max-width: 1400px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr));
+  gap: 2rem;
   backdrop-filter: blur(5px) saturate(180%);
   border-radius: 1.5rem;
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), inset 0 4px 20px rgba(255, 255, 255, 0.3);
@@ -228,11 +229,12 @@ body {
 .portfolio-item {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
   background: rgba(0, 0, 0, 0.2);
-  padding: 0.75rem;
-  border-radius: 0.75rem;
+  padding: 1.25rem;
+  border-radius: 1rem;
   transition: transform 0.3s ease;
+  height: 100%;
 }
 
 .portfolio-item:hover {
@@ -241,7 +243,8 @@ body {
 
 .portfolio img {
   width: 100%;
-  height: auto;
+  height: 250px;
+  object-fit: cover;
   border-radius: 0.5rem;
   transition: opacity 0.3s ease;
   opacity: 0.85;
@@ -253,11 +256,11 @@ body {
 }
 
 .portfolio-caption {
-  font-size: 0.9rem;
-  line-height: 1.4;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #fff;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .portfolio-about {
