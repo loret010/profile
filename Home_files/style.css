@@ -214,9 +214,11 @@ body {
 }
 
 .portfolio-section {
-  width: 90%;
-  max-width: 1000px;
-  margin: 20px auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .section-title {
@@ -226,6 +228,7 @@ body {
   color: #fff;
   margin-bottom: 2rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 .portfolio {
@@ -394,9 +397,12 @@ body {
 .modal-content {
   margin: auto;
   display: block;
-  width: 100%;
-  max-width: 1300px;
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
   object-fit: contain;
+  border-radius: 8px;
 }
 
 .close {
